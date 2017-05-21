@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Droppable list</h2>
+  <ul class="list-group">
+  <li class="list-group-item well" *ngFor="let hero of HeroList" draggable="true" (dragstart)="onDragStart($event)">{{hero}}</li><!-- 
+    <li class="list-group-item" draggable="true" (dragstart)="onDragStart($event)">First item</li>
+    <li class="list-group-item" draggable="true" (dragstart)="onDragStart($event)">Second item</li>
+    <li class="list-group-item" draggable="true" (dragstart)="onDragStart($event)">Third item</li> -->
+  </ul>
+</div>
+<div class="container" appDnd (dropEventHanlder)="onDropHanlder($event)">
+  <h2>Drag zone</h2>
+ <ul class="list-group">
+  <li class="list-group-item well" *ngFor="let hero of HeroListDropped">{{hero}}</li>
+  </ul>
+</div>
